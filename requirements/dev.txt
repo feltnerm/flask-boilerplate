@@ -1,0 +1,17 @@
+## Everything a developer needs. If it is a basic package required by the site
+## then it goes in requirements/prod.txt. If it's a package for developers 
+# (testing, docs, etc.) it goes in this file.
+-r prod.txt
+
+# Documentation
+Sphinx
+
+# Testing
+Flask-Admin
+Flask-DebugToolbar
+Flask-Testing
+nose
+mock
+coverage
+pep8
+pylint

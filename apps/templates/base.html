@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  	================================================== -->
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="Mark Feltner, feltnerm@uwplatt.edu">
+
+	<!-- Mobile Specific Metas
+  	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	{% assets "css_all" %}
+	<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+	{% endassets %}
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  	<!-- Modernizr
+	================================================== -->
+  	<script src="static/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"
+  			 type="text/javascript" >
+  	</script>
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container" style="padding-top: 25px;">
+		<div class="two columns sidebar">
+			<nav>
+				<h3 id="logo">Web&pi;</h3>
+                <h4>{% block subtitle %}{% endblock %}</h4>
+                <ul>
+					<li>
+						<a href="/admin">Admin</a>
+					</li>
+					<li>
+						<a href="/git">Git</a>
+					</li>
+				</ul>
+                <hr />
+            </nav>
+			{% block sidebarextra %}{% endblock %}
+		</div>
+
+        <div class="twelve columns offset-by-two">
+                {%block navbarextra %}{% endblock %}
+        </div>
+
+		<div class="fourteen columns">
+		{% block maincontent %}{% endblock %}
+		</div>
+
+		<div class="sixteen columns">
+			<footer style="text-align: center;">
+				{% block footerextra %}{% endblock %}
+                <hr />
+                <p>Copyright (c) 2012, University of Wisconsin System, <a href="mailto:feltnerm@uwplatt.edu">Mark Feltner</a></p>
+			</footer>
+		</div>
+	</div><!-- container -->
+
+	<!-- JS
+	================================================== -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+	{% assets "js_all" %}
+	<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	{% endassets %}
+
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

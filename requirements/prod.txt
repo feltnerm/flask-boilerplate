@@ -1,0 +1,46 @@
+# Install compiled stuff first
+-r compiled.txt
+
+ipython
+
+# Flask Stuff
+Flask
+Werkzeug
+
+# Templates
+Jinja2
+
+# Syntax Highlighting
+Pygments
+Markdown2
+
+# DB
+#Flask-Mongokit
+#Flask-SQLAlchemy
+#SQLAlchemy-Migrate
+
+# Internationalization
+#Flask-Babel
+
+# Logging
+Logbook
+
+# Caching
+python-memcached
+Flask-Cache
+
+# Admin
+Flask-Script
+
+# User Auth
+Flask-Login
+Flask-Principal
+
+# Extensions
+cssmin
+Flask-Assets
+Flask-Bcrypt
+Flask-Mail
+Flask-Themes
+Flask-Uploads
+Flask-WTF
