@@ -217,12 +217,12 @@ def boilerplate():
     if not os.path.exists(bp['PROJECT_ROOT']):
         local('mkdir %s' % bp['PROJECT_ROOT'])
         local('cp -r %s/* %s' % (env.PROJECT_ROOT, bp['PROJECT_ROOT']))
-        upload_template('settings.py.template',
-            bp['PROJECT_ROOT'],
-            context=bp,
-            use_jinja=True,
-            backup=False
-            )
+        #upload_template('settings.py.template',
+        #    bp['PROJECT_ROOT'],
+        #    context=bp,
+        #    use_jinja=True,
+        #    backup=False
+        #    )
     else:
         pred('Project already exists!')
 
