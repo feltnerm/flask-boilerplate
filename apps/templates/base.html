@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<meta name="description" content="">
-	<meta name="author" content="Mark Feltner, feltnerm@uwplatt.edu">
+	<meta name="author" content="">
 
 	<!-- Mobile Specific Metas
   	================================================== -->
@@ -28,7 +28,7 @@
 
   	<!-- Modernizr
 	================================================== -->
-  	<script src="static/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"
+  	<script src="static/js/libs/modernizr.min.js"
   			 type="text/javascript" >
   	</script>
 
@@ -51,24 +51,16 @@
 	<div class="container" style="padding-top: 25px;">
 		<div class="two columns sidebar">
 			<nav>
-				<h3 id="logo">Web&pi;</h3>
-                <h4>{% block subtitle %}{% endblock %}</h4>
+				<h3 id="logo">Title</h3>
+                <h4></h4>
                 <ul>
 					<li>
 						<a href="/admin">Admin</a>
 					</li>
-					<li>
-						<a href="/git">Git</a>
-					</li>
 				</ul>
                 <hr />
             </nav>
-			{% block sidebarextra %}{% endblock %}
 		</div>
-
-        <div class="twelve columns offset-by-two">
-                {%block navbarextra %}{% endblock %}
-        </div>
 
 		<div class="fourteen columns">
 		{% block maincontent %}{% endblock %}
@@ -78,7 +70,7 @@
 			<footer style="text-align: center;">
 				{% block footerextra %}{% endblock %}
                 <hr />
-                <p>Copyright (c) 2012, University of Wisconsin System, <a href="mailto:feltnerm@uwplatt.edu">Mark Feltner</a></p>
+                <p>Copyright (c) 2012, </a></p>
 			</footer>
 		</div>
 	</div><!-- container -->
