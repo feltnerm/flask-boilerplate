@@ -50,8 +50,7 @@ def penv():
 # ====================
 
 # Default
-env.PROJECT_VENV = ""
-env.PROJECT_ROOT = ""
+env.PROJECT_ROOT = os.path.dirname(__file__)
 env.user = "mark"
 env.roledefs = {
     'local': ['localhost'],
@@ -201,6 +200,31 @@ def status():
 # Backups
 # =======
 
+
+# ===========
+# Boilerplate
+# ===========
+@task
+def boilerplate():
+    """ Create a new project based on the boilerplate. """
+    pgreen("Forging boilerplate.", bold=True)
+    bp = dict()
+    bp['SITE_NAME'] = prompt(magenta("Project Name: "))
+    bp['PROJECT_ROOT'] = os.path.expanduser(os.path.join('~/Projects',bp['SITE_NAME']))
+    if not confirm(green("%s okay for project root?" % bp['PROJECT_ROOT'])):
+        bp['PROJECT_ROOT'] = prompt(magenta("Project Root: "))
+    
+    if not os.path.exists(bp['PROJECT_ROOT']):
+        local('mkdir %s' % bp['PROJECT_ROOT'])
+        local('cp -r %s/* %s' % (env.PROJECT_ROOT, bp['PROJECT_ROOT']))
+        upload_template('settings.py.template',
+            bp['PROJECT_ROOT'],
+            context=bp,
+            use_jinja=True,
+            backup=False
+            )
+    else:
+        pred('Project already exists!')
 
 # =========
 # Bootstrap

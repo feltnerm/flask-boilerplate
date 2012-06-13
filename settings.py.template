@@ -9,7 +9,7 @@ import logging
 # Server Settings
 # ================
 
-SITE_NAME = '' #ENTER SITE NAME!
+SITE_NAME = '{{ SITE_NAME }}' #ENTER SITE NAME!
 #SITE_URL = ''
 #ADMINS = ['admin@%s' % SITE_URL]
 #SERVER_EMAIL = '{{ DEFAULT_MAIL_SENDER }}'
